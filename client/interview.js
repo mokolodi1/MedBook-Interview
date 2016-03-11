@@ -14,70 +14,64 @@
 
  */
 
+let patients = [
+  {
+    name: "patient1",
+    disease: "liver cancer",
+    location: "ohsu",
+  },
+  {
+    name: "patient2",
+    disease: "kidney cancer",
+    location: "ucla",
+  },
+  {
+    name: "patient3",
+    disease: "lung cancer",
+    location: "ucsf",
+  },
+  {
+    name: "patient4",
+    disease: "lung cancer",
+    location: "mskcc",
+  },
+  {
+    name: "patient5",
+    disease: "kidney cancer",
+    location: "ohsu",
+  },
+  {
+    name: "patient6",
+    disease: "lung cancer",
+    location: "ucla",
+  },
+  {
+    name: "patient7",
+    disease: "lymphoma cancer",
+    location: "ucsf",
+  },
+  {
+    name: "patient8",
+    disease: "lung cancer",
+    location: "mskcc",
+  },
+];
 
-var value_color_scale =  ["red", "green", "blue", "orange", "black", "yellow"];
-var value_color_scale_i = 0;
-var value_color_map = {};
+
+
+let value_color_scale =  ["red", "green", "blue", "orange", "black", "yellow"];
+let value_color_scale_i = 0;
+let value_color_map = {};
 
 function color_map(attribute, value) {
-    var key = attribute+";"+value];
-    if (key in value_color_map)
-	value_color_map[attribute+";"+value] = value_color_scale[ value_color_scale_i++ % value_color_scale.length];
-    ret value_color_map[key];
+  let key = attribute + ";" + value;
+
+  // meant !key
+  if (!key in value_color_map) {
+    let color = value_color_scale[value_color_scale_i++ % value_color_scale.length];
+    value_color_map[key] = color;
+  }
+
+  // change ret to return
+  return value_color_map[key];
 }
-
-
-patients = [
-  {
-      name: "patient1",
-      disease: "liver cancer",
-      location: "ohsu",
-  },
-
-  {
-      name: "patient2",
-      disease: "kidney cancer",
-      location: "ucla",
-  },
-
-
-  {
-      name: "patient3",
-      disease: "lung cancer",
-      location: "ucsf",
-  },
-
-
-  {
-      name: "patient4",
-      disease: "lung cancer",
-      location: "mskcc",
-  },
-
-  {
-      name: "patient5",
-      disease: "kidney cancer",
-      location: "ohsu",
-  },
-
-  {
-      name: "patient6",
-      disease: "lung cancer",
-      location: "ucla",
-  },
-
-
-  {
-      name: "patient7",
-      disease: "lymphoma cancer",
-      location: "ucsf",
-  },
-
-
-  {
-      name: "patient8",
-      disease: "lung cancer",
-      location: "mskcc",
-  },
-
-]
