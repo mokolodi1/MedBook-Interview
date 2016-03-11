@@ -73,7 +73,6 @@ Template.graph.onRendered(function () {
 
   // figure out the domain of locations
   let uniqueLocations = _.uniq(_.pluck(patientsArray, "location"));
-  uniqueLocations.sort();
 
   // group by location and then number of patients by disease
   let locations = _.map(uniqueLocations, (location) => {
@@ -109,6 +108,9 @@ Template.graph.onRendered(function () {
       diseases,
       total,
     };
+  });
+  locations.sort((a, b) => {
+    return b.total - a.total;
   });
 
   x.domain(locations.map(function(d) { return d.location; }));
