@@ -3,5 +3,15 @@
 </head>
 
 <body>
-  <h1>Hi</h1>
+  {{#if Template.subscriptionsReady}}
+    {{> graph}}
+  {{else}}
+    <h1>Loading...</h1>
+  {{/if}}
 </body>
+
+<template name="graph">
+  <div id="graph-attach">
+    
+  </div>
+</template>
