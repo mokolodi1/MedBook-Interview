@@ -1,20 +1,3 @@
-/*
- * Please use the code and data below to write a simple HTML/SVG Meteor visualization showing a graph
- * of the counts of patients with different cancers and locations using the color map function.
- * If there are bugs in this code, please fix and document them.
-
- * You may use the D3 library, but you do not have to.
-
- * You may deploy this to meteor.com or heroku.com
- * Please keep it simple.
-
- * Please complete by Friday night if possible.
-
- * Ted
-
- */
-
-
 // given code
 
 let value_color_scale =  ["red", "green", "blue", "orange", "black", "yellow"];
